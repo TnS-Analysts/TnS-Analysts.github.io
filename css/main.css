@@ -13,6 +13,8 @@ h1, h2, h3, h4{
 	letter-spacing: 1px;
 }
 
+/* HEADER */
+
 .header{
 	min-height: 100vh;
 	width: 100%;
@@ -49,6 +51,7 @@ nav img{
 	color: white;
 	text-decoration: none;
 	font-size: 13px;
+	font-weight: bold;
 }
 
 .nav-links ul li::after{
@@ -74,4 +77,90 @@ nav img{
 	transform: translate(-50%,-50%);
 	text-align: center;
 	font-size: 48px;
+}
+
+/* MAIN */
+.main{
+	margin: auto;
+	font-size: 1.25em;
+}
+
+.main p{
+	text-indent: 50px;
+	line-height: 1.5em;
+	padding: 10px;
+}
+
+.main h1{
+	font-size: 2.5em;
+	line-height: 2em;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.container img{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.background{
+	min-height: 100vh;
+	display: flex;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.content{
+	margin: auto;
+	width: 85%;
+	outline: dotted;
+}
+
+.row{
+	text-align: center;
+	margin-top: 2%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.column{
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	flex-basis: 31%;
+	background: #ffffaf;
+	border-radius: 10px;
+	padding: 20px 12px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+.column img{
+	width: 100%;
+	height: 200px;
+	object-fit: cover
+}
+
+.column:hover{
+	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* BACKGROUND FOR EACH DIVISION */
+
+.intro{
+	/*background: #FDF3DD;*/
+}
+
+.step1{
+	background: #1b1811;
+	color: white;
+}
+
+.step3{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../images/background1.jpg);
+	color: white;
 }
