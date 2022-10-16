@@ -87,6 +87,7 @@ nav img{
 
 .main p{
 	text-indent: 50px;
+	text-align: justify;
 	line-height: 1.5em;
 	padding: 10px;
 }
@@ -120,10 +121,14 @@ nav img{
 }
 
 .row{
-	text-align: center;
 	margin-top: 2%;
 	display: flex;
 	justify-content: space-between;
+	column-gap: 20px;
+}
+
+.row strong{
+	text-align: center;
 }
 
 .column{
@@ -131,21 +136,162 @@ nav img{
 	flex-direction: column;
 	row-gap: 10px;
 	flex-basis: 31%;
-	background: #ffffaf;
 	border-radius: 10px;
-	padding: 20px 12px;
-	box-sizing: border-box;
-	transition: 0.5s;
 }
 
 .column img{
 	width: 100%;
 	height: 200px;
-	object-fit: cover
+	object-fit: cover;
+	border-radius: 10px;
 }
 
-.column:hover{
-	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+.column2{
+	display: flex;
+	flex-direction: column;
+	flex-basis: 31%;
+	background: #333;
+	border-radius: 10px;
+	padding: 20px 12px;
+	box-sizing: border-box;
+	transition: 0.5s;
+	text-align: center;
+}
+
+.column2:hover{
+	box-shadow: 0 0 20px 0px lightgray;
+}
+
+.column2 img{
+	width: 85%;
+	height: 190px;
+	margin-left: auto;
+	margin-right: auto;
+	object-fit: contain;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	filter: invert(1);
+}
+
+.column2 i{
+	margin-top: 10px;
+	font-size: 0.75em;
+	color: #bbb;
+}
+
+/* AUDIENCE ANALYSIS SURVEY */
+.survey{
+	background: white;
+	padding: 40px 50px 40px 40px;
+	color: black;
+	border-radius: 20px;
+	margin: 0 20px;
+}
+
+.survey .main-title{
+	font-size: 2em;
+	font-weight: bolder;
+	font-style: italic;
+	letter-spacing: -1px;
+	margin-bottom: 30px;
+}
+
+.survey .table-content{
+	display: flex;
+	/*align-items: center;*/
+	/*justify-content: space-between;*/
+}
+
+.survey .table-content .list{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 23%;
+	margin-right: 50px;
+}
+
+.survey .table-content .list img{
+	max-height: 1em;
+	vertical-align: text-bottom;
+}
+
+.table-content .list label{
+	height: 3em;
+	cursor: pointer;
+	border-radius: 15px;
+	width: 100%;
+	line-height: 3em;
+	/*margin: 5px 0;*/
+	padding-left: 20px;
+	z-index: 12;
+	font-weight: bold;
+	transition: all 0.5s ease;
+}
+
+.table-content .list label:hover{
+	/*color: #8e6a00;*/
+	filter: invert(34%) sepia(76%) saturate(2443%) hue-rotate(38deg) brightness(91%) contrast(101%);
+}
+
+#demographics:checked ~ .list .demographics,
+#beliefs:checked ~ .list .beliefs,
+#attitudes:checked ~ .list .attitudes,
+#preferences:checked ~ .list .preferences{
+	filter: invert(1);
+}
+
+.table-content .indicator{
+	height: 3em;
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+	background: #cc9901;
+	border-radius: 15px;
+	transition: all 0.5s ease;
+}
+
+#demographics:checked ~ .list .indicator{
+	top: 0;
+}
+
+#beliefs:checked ~ .list .indicator{
+	top: 3em;
+}
+
+#attitudes:checked ~ .list .indicator{
+	top: 6em;
+}
+
+#preferences:checked ~ .list .indicator{
+	top: 9em;
+}
+
+.survey input[type="radio"]{
+	display: none;
+}
+
+.survey .table-content .text-content{
+	height: 100%;
+	width: 75%;
+}
+
+.survey .table-content .text-content .title{
+	font-size: 1.25em;
+	font-weight: bold;
+	letter-spacing: -1px;
+	margin-bottom: 10px;
+}
+
+.survey .table-content .text-content .text{
+	display: none;
+}
+
+#demographics:checked ~ .text-content .demographics,
+#beliefs:checked ~ .text-content .beliefs,
+#attitudes:checked ~ .text-content .attitudes,
+#preferences:checked ~ .text-content .preferences{
+	display: block;
 }
 
 /* BACKGROUND FOR EACH DIVISION */
@@ -161,5 +307,6 @@ nav img{
 
 .step3{
 	background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../images/background1.jpg);
+	background-size: cover;
 	color: white;
 }
