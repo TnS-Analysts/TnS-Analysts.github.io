@@ -354,5 +354,16 @@ nav img{
 }
 
 .step5 h1{
-	text-align: center;
+	text-align: center ;
+}
+
+/* SCROLL ANIMATIONS */
+
+.hidden{
+	opacity: 0;
+	transition: all 1s;
+}
+
+.show{
+	opacity: 1;
 }
