@@ -124,7 +124,7 @@ nav img{
 .row{
 	margin-top: 2%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	column-gap: 20px;
 }
 
