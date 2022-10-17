@@ -1,118 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Home</title>
-  <link rel="stylesheet" href="https://tns-analysts.github.io/css/main.css">
-  <script defer src="https://tns-analysts.github.io/js/app.js"></script>
-  <style>
-    .column img {height: 1000 px ! important; object-fit: cover;}
-  </style>
-</head>
-<body>
-  <!-- HEADER -->
-  <section class="header home">
-    <nav>
-      <a href="../index.html"><img src="https://tns-analysts.github.io/images/logo_transparent.png"></a>
-      <div class="nav-links">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">About Us</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="text-box">
-      <h1> Welcome to
-        <br>T&S Analysts.com</h1>
-    </div>
-  </section>
-		
-	<section class="main">
-    <!-- OUR TEAM -->
-    <div class="background our_team"><div class="content hidden">
-      <h1>Our Team</h1>
-      <div class="row" style="text-align: center;">
-      	<div class="column">
-      		<img src="https://tns-analysts.github.io/images/team/Uy.jpg">
-          <strong>Ryza Eireene Uy</strong>
-          <i>Spokesperson</i>
-      	</div>
-        
-      	<div class="column">
-      		<img src="https://tns-analysts.github.io/images/logo.png">
-          <strong>Grace Angela Victorio</strong>
-          <i>Spokesperson</i>
-      	</div>
-        
-      	<div class="column">
-      		<img src="https://tns-analysts.github.io/images/team/Rodriguez.jpg">
-          <strong>Vincent William Rodriguez</strong>
-          <i>Scribe</i>
-      	</div>
-        
-      	<div class="column">
-      		<img src="https://tns-analysts.github.io/images/logo.png">
-          <strong>Cayril Aguilar</strong>
-          <i>Facilitator</i>
-      	</div>
-        
-      	<div class="column">
-      		<img src="https://tns-analysts.github.io/images/logo.png">
-          <strong>Hillarey William Bazar</strong>
-          <i>Scribe</i>
-      	</div>
-      </div>
-    </div></div>
-      
-    <!--GOALS & PURPOSE-->
-    <div class ="background goals"><div class ="content hidden">
-    	<div class="container">
-      <img src="https://i.pinimg.com/736x/ed/ef/2e/edef2e649a7b02a67f3d6fe9476c06f7.jpg" style="width: 45%; height: auto; padding-left: 0px;">
-      	<div>
-        	<h1> Our Goals & Purpose</h1>
-        	<p> We aspire and strive for knowledge, understanding, and greater good, which we believe we can achieve through research, analysis, and learning, and we will persevere even when we are tired and stressed to help and aid the betterment of the world. We are T&S Analysts at your service. </p>
-      	</div>
-    	</div>
-    </div></div>
+  <head>
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/app.js"></script>
+    <style>
+      /* Zeyn font disabled because it's causing lag */
+      /*@import url(//db.onlinewebfonts.com/c/fb0782a2e6139597a7a7b6adaa377f5e?family=29LT+Zeyn+Light);*/
+      @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
 
-		<!--Wisdom-->
-  	<div class="background wisdom"><div class="content hidden">
-        <div class="container">
-          <div>
-            <h1>“Wisdom comes not from age, but from education and learning.”</h1>
-            <p>We are APEC Schools Ortigas Extension Grade 10 students from section B09-10-S1-2. . We may only be students but we at APEC schools are always taught that we must learn to be better each day.</p>
-          </div>
+      .header {background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/home_header.jpg)}
+      .column img {height: 350px;}
 
-          <img src=" https://static.vecteezy.com/system/resources/thumbnails/002/041/725/small/motion-of-opened-book-on-desk-static-shot-free-video.jpg" style="width: 35%; height: auto;" />
+      h1{
+        font-size: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular';
+      }
+
+      h3{
+          font-size: 15px;
+          font-family: 'Quattrocento', serif;
+      }
+
+      .our_team, .wisdom{
+        background-color: #d3c1b3;
+      }
+
+      .goals{
+        background-color: #f9f7f0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <section class="header">
+      <nav>
+        <a href="index.html"><img src="images/logo_transparent.png"></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">About Us</a></li>
+          </ul>
         </div>
-		</div></div>
+      </nav>
+      <div class="text-box">
+        <h1> Welcome to
+          <br>T&S Analysts.com</h1>
+      </div>
+    </section>
+  		
+  	<section class="main">
+      <!-- OUR TEAM -->
+      <div class="background our_team"><div class="content hidden">
+        <h1>Our Team</h1>
+        <div class="row" style="text-align: center;">
+        	<div class="column">
+        		<img src="images/team/Uy.jpg">
+            <strong>Ryza Eireene Uy</strong>
+            <i>Spokesperson</i>
+        	</div>
+          
+        	<div class="column">
+        		<img src="images/image3.jpg">
+            <strong>Grace Angela Victorio</strong>
+            <i>Spokesperson</i>
+        	</div>
+          
+        	<div class="column">
+        		<img src="images/team/Rodriguez.jpg">
+            <strong>Vincent William Rodriguez</strong>
+            <i>Scribe</i>
+        	</div>
+          
+        	<div class="column">
+        		<img src="images/image3.jpg">
+            <strong>Cayril Aguilar</strong>
+            <i>Facilitator</i>
+        	</div>
+          
+        	<div class="column">
+        		<img src="images/image3.jpg">
+            <strong>Hillarey William Bazar</strong>
+            <i>Scribe</i>
+        	</div>
+        </div>
+      </div></div>
+        
+      <!--GOALS & PURPOSE-->
+      <div class ="background goals"><div class ="content hidden">
+      	<div class="container">
+          <img src="images/goals.png" style="width: 40%;">
+        	<div style="flex-grow: 1;">
+          	<h1> Our Goals & Purpose</h1>
+          	<p> We aspire and strive for knowledge, understanding, and greater good, which we believe we can achieve through research, analysis, and learning, and we will persevere even when we are tired and stressed to help and aid the betterment of the world. We are T&S Analysts at your service. </p>
+        	</div>
+      	</div>
+      </div></div>
 
+  		<!--Wisdom-->
+    	<div class="background wisdom"><div class="content hidden">
+          <div class="container">
+            <div style="width: 60%">
+              <h1>“Wisdom comes not from age, but from education and learning.”</h1>
+              <p>We are APEC Schools Ortigas Extension Grade 10 students from section B09-10-S1-2. We may only be students, but we at APEC schools are always taught that we must learn to be better each day.</p>
+            </div>
 
-
-
-  </section>
-    
-<!--Footer-->
- <div class="Words">
-    <h1>Contact Us</h1>
-    <h2>Gmails:</h2>
-    <h3>ap.ryzaeireene.uy@apecschools.edu.ph</h3>
-    <h3>ap.vincentwilliam.rodriguez@apecschools.edu.ph</h3>
-    <h3>ap.cayril.aguilar@apecschools.edu.ph</h3>
-   </div>
-   <style>
-@import url(//db.onlinewebfonts.com/c/fb0782a2e6139597a7a7b6adaa377f5e?family=29LT+Zeyn+Light);
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
-
-
-h1{ 
-    font-size: 50px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular';
-}
-h3{
-    font-size: 15px;
-    font-family: 'Quattrocento', serif;
-}
-   </style>
-</body>
+            <img src="images/wisdom.png" style="flex-grow: 1;"/>
+          </div>
+  		</div></div>
+    </section>
+      
+    <!--Footer-->
+   <div class="Words">
+      <h1>Contact Us</h1>
+      <h2>Gmails:</h2>
+      <h3>ap.ryzaeireene.uy@apecschools.edu.ph</h3>
+      <h3>ap.vincentwilliam.rodriguez@apecschools.edu.ph</h3>
+      <h3>ap.cayril.aguilar@apecschools.edu.ph</h3>
+     </div>
+  </body>
 </html>

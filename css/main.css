@@ -5,6 +5,8 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Comfortaa', cursive;
+  background-position: center;
+  background-size: cover;
 }
 
 h1, h2, h3, h4{
@@ -19,13 +21,7 @@ h1, h2, h3, h4{
 	min-height: 100vh;
 	width: 100%;
 	background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../images/header.jpg);
-	background-position: center;
-	background-size: cover;
 	position: relative;
-}
-
-.header .home{
-	background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../images/Home_Header BG.jpg); !important
 }
 
 nav{
@@ -99,6 +95,7 @@ nav img{
 .main h1{
 	font-size: 2.5em;
 	margin-bottom: 10px;
+	color: #5c0d02;
 }
 
 .container{
@@ -312,27 +309,19 @@ nav img{
 
 .intro{
 	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/background6.png);
-	background-position: center;
-	background-size: cover;
 }
 
 .step1{
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/background3.png);
-	background-position: center;
-	background-size: cover;
 	color: white;
 }
 
 .step2{
 	background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/background5.png);
-	background-position: center;
-	background-size: cover;
 }
 
 .step3{
 	background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../images/background1.jpg);
-	background-position: center;
-	background-size: cover;
 	color: white;
 }
 
@@ -352,8 +341,6 @@ nav img{
 
 .step5{
 	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/background4.png);
-	background-position: center;
-	background-size: cover;
 	color: white;
 }
 
@@ -365,9 +352,11 @@ nav img{
 
 .hidden{
 	opacity: 0;
-	transition: all 1s;
+	transform: translateX(-20%);
+	transition: all 1.5s ease;
 }
 
 .show{
 	opacity: 1;
+	transform: translateX(0%);
 }
