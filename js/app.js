@@ -35,12 +35,23 @@ class WebsiteFooter extends HTMLElement {
 	connectedCallback(){
 		this.innerHTML = `
 <footer>
-    <div class="column">
-        <h1>Contact Us</h1>
-        <h2>Gmails:</h2>
-        <h3>ap.ryzaeireene.uy@apecschools.edu.ph</h3>
-        <h3>ap.vincentwilliam.rodriguez@apecschools.edu.ph</h3>
-        <h3>ap.cayril.aguilar@apecschools.edu.ph</h3>
+    <div class="footer-main">
+        <div class="footer-row">
+            <div class="footer-column">
+                <h1>Contact Us</h1>
+                <strong>Gmails:</strong>
+                <p>ap.ryzaeireene.uy@apecschools.edu.ph</p>
+                <p>ap.vincentwilliam.rodriguez@apecschools.edu.ph</p>
+                <p>ap.cayril.aguilar@apecschools.edu.ph</p>
+            </div>
+
+            <div class="footer-column">
+                <a href="/index.html"><img src="/images/logo_transparent.png"></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2022 T&S Analysts. All rights reserved.</p> 
+        </div>
     </div>
 </footer>
 `

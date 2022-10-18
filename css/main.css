@@ -72,21 +72,54 @@ nav img{
 /* FOOTER */
 
 footer{
-	min-height: 50vh;
-	padding: 2% 6%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	background-color: #222;
 	color: dimgray;
-}
-
-footer h1, footer h2, footer h3, footer h4{
 	font-family: 'Comfortaa', cursive;
-	font-weight: bold;
+	height: 50vh;
+	padding: 4% 6%;
 }
 
-footer column{
+footer .footer-row{
+	display: flex;
+	justify-content: space-between;
+}
+
+footer .footer-column{
+	flex-basis: 25vh;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}
+
+footer .footer-main{
+	flex-basis: 25vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+footer img{
+	width: 100%;
+}
+
+footer h1{
+	font-family: 'Comfortaa', cursive;
+	color: #bbb;
+	font-weight: bolder;
+	font-size: 1.5em;
+}
+
+footer strong{
+	font-weight: bold;
+	font-size: 1em;
+}
+
+footer p{
+	font-size: 0.75em;
+}
+
+footer .copyright{
 	text-align: center;
 }
 
