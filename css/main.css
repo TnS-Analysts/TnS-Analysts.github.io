@@ -9,10 +9,8 @@
   background-size: cover;
 }
 
-h1, h2, h3, h4{
-	font-family: 'League Gothic', sans-serif;
-	font-weight: lighter;
-	letter-spacing: 1px;
+h1, h2, h3, h4{ 
+        font-family: 'Lucida Sans', 'Lucida Sans Regular';
 }
 
 /* HEADER */
@@ -150,7 +148,7 @@ footer .copyright{
 }
 
 .main h1{
-	font-size: 2.5em;
+        font-size: 3em;
 	margin-bottom: 10px;
 	color: #5c0d02;
 }
