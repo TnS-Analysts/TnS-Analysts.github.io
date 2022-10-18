@@ -305,6 +305,34 @@ nav img{
 	margin-bottom: 15px;
 }
 
+/* LIST COLUMN */
+
+.list-column{
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+	margin-top: 2%;
+}
+
+.list-column .item{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: 25px;
+	background-color: #f9f7f0;
+	border-radius: 15px;
+	padding: 10px;
+	box-shadow: rgba(70, 70, 70, 0.4) 5px 5px, rgba(70, 70, 70, 0.3) 10px 10px, rgba(70, 70, 70, 0.2) 15px 15px, rgba(70, 70, 70, 0.1) 20px 20px, rgba(70, 70, 70, 0.05) 25px 25px;
+}
+
+.list-column .item img{
+	width: 10%;
+}
+
+.list-column .item strong{
+	flex-grow: 1;
+}
+
 /* SCROLL ANIMATIONS */
 
 .hidden{
