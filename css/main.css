@@ -24,6 +24,7 @@ h1, h2, h3, h4{
 	position: relative;
 }
 
+/* NAV */
 nav{
 	display: flex;
 	padding: 2% 6%;
@@ -67,6 +68,29 @@ nav img{
 .nav-links ul li:hover::after{
 	width: 100%;
 }
+
+/* FOOTER */
+
+footer{
+	min-height: 50vh;
+	padding: 2% 6%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #222;
+	color: dimgray;
+}
+
+footer h1, footer h2, footer h3, footer h4{
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+}
+
+footer column{
+	text-align: center;
+}
+
+/* OTHER */
 
 .text-box{
 	width: 90%;

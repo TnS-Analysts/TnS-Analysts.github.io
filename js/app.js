@@ -31,4 +31,21 @@ class WebsiteNav extends HTMLElement {
 	}
 }
 
+class WebsiteFooter extends HTMLElement {
+	connectedCallback(){
+		this.innerHTML = `
+<footer>
+    <div class="column">
+        <h1>Contact Us</h1>
+        <h2>Gmails:</h2>
+        <h3>ap.ryzaeireene.uy@apecschools.edu.ph</h3>
+        <h3>ap.vincentwilliam.rodriguez@apecschools.edu.ph</h3>
+        <h3>ap.cayril.aguilar@apecschools.edu.ph</h3>
+    </div>
+</footer>
+`
+	}
+}
+
 customElements.define('website-nav', WebsiteNav)
+customElements.define('website-footer', WebsiteFooter)
