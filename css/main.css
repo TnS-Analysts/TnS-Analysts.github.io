@@ -110,7 +110,7 @@ nav button {
 	top: 2em;
 	position: absolute;
 	flex-direction: column;
-	background-color: rgba(10, 10, 10, 0.1);
+	background-color: rgba(10, 10, 10, 0.7);
 	outline: solid #444 2px;
 	border-radius: 10px;
 	padding: 10px;
@@ -126,6 +126,15 @@ nav button {
 	opacity: 1;
 	z-index: 1;
 	transform: translateY(0);
+}
+
+.drop-btn img {
+	transform: rotate(0deg);
+	transition: all 0.5s ease;
+}
+
+.options.active ~ .drop-btn img {
+	transform: rotate(180deg);
 }
 
 /* FOOTER */

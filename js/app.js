@@ -24,13 +24,6 @@ class WebsiteNav extends HTMLElement {
       <li><span class="text"><a href="/index.html">Home</a></span></li>
 
       <li><div class="dropdown">
-        <button class="drop-btn">
-          <span class="text">
-            Quarter 1
-            <img src="/images/icons/arrow.png">
-          </span>
-        </button>
-
         <div class="options">
           <div class="drop-option">
             <a href="/pages/basic_information.html">
@@ -48,6 +41,13 @@ class WebsiteNav extends HTMLElement {
             </a>
           </div>
         </div>
+
+        <button class="drop-btn">
+          <span class="text">
+            Quarter 1
+            <img src="/images/icons/arrow.png">
+          </span>
+        </button>
       </div></li>
     </ul>
   </div>
@@ -91,11 +91,6 @@ customElements.define('website-footer', WebsiteFooter)
 
 const optionMenu = document.querySelector(".options"),
        selectBtn = document.querySelector(".drop-btn")
-
-
-if (optionMenu.classList.contains("active")) {
-    optionMenu.classList.remove("active")
-}
 
 selectBtn.addEventListener("click", () => {setTimeout(() => optionMenu.classList.add("active"), 1)})
 document.addEventListener("click", () => optionMenu.classList.remove("active"))
