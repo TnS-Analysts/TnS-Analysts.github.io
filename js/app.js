@@ -21,9 +21,34 @@ class WebsiteNav extends HTMLElement {
   <a href="/index.html"><img src="/images/logo_transparent.png"></a>
   <div class="nav-links">
     <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="">Projects</a></li>
-      <li><a href="">About Us</a></li>
+      <li><span class="text"><a href="/index.html">Home</a></span></li>
+
+      <li><div class="dropdown">
+        <button class="drop-btn">
+          <span class="text">
+            Quarter 1
+            <img src="/images/icons/arrow.png">
+          </span>
+        </button>
+
+        <div class="options">
+          <div class="drop-option">
+            <a href="/pages/basic_information.html">
+              <span class="text">
+                EG7 Experience 1 (Part 1)
+              </span>
+            </a>
+          </div>
+
+          <div class="drop-option">
+            <a href="/pages/journey.html">
+              <span class="text">
+                EG7 Experience 1 (Part 2)
+              </span>
+            </a>
+          </div>
+        </div>
+      </div></li>
     </ul>
   </div>
 </nav>
@@ -60,3 +85,17 @@ class WebsiteFooter extends HTMLElement {
 
 customElements.define('website-nav', WebsiteNav)
 customElements.define('website-footer', WebsiteFooter)
+
+
+// Navigation script
+
+const optionMenu = document.querySelector(".options"),
+       selectBtn = document.querySelector(".drop-btn")
+
+
+if (optionMenu.classList.contains("active")) {
+    optionMenu.classList.remove("active")
+}
+
+selectBtn.addEventListener("click", () => {setTimeout(() => optionMenu.classList.add("active"), 1)})
+document.addEventListener("click", () => optionMenu.classList.remove("active"))
