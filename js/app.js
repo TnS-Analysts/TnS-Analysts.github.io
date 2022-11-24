@@ -44,11 +44,15 @@ class WebsiteNav extends HTMLElement {
 
         <button class="drop-btn">
           <span class="text">
-            Quarter 1
+            Our Content
             <img src="/images/icons/arrow.png">
           </span>
         </button>
       </div></li>
+
+      <li><span class="text"><a href="/index.html">About Us</a></span></li>
+      <li><span class="text"><a href="/index.html">Contact Us</a></span></li>
+      <li><span class="text"><a href="/index.html">Our Events</a></span></li>
     </ul>
   </div>
 </nav>
