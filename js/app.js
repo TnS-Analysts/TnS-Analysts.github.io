@@ -19,14 +19,16 @@ class WebsiteNav extends HTMLElement {
 		this.innerHTML = `
 <nav>
   <a href="/index.html"><img src="/images/logo_transparent.png"></a>
-  <div class="nav-links">
+  <div class="nav-links" id="navLinks">
+    <img src="/images/icons/close.png" class="mobile" onclick="hideMenu()">
+
     <ul>
       <li><span class="text"><a href="/index.html">Home</a></span></li>
 
       <li><div class="dropdown">
         <div class="options">
           <div class="drop-option">
-            <a href="/pages/basic_information.html">
+            <a href="/pages/basic_information.html" class="mobile">
               <span class="text">
                 EG7 Experience 1 (Part 1)
               </span>
@@ -55,6 +57,7 @@ class WebsiteNav extends HTMLElement {
       <li><span class="text"><a href="/index.html">Our Events</a></span></li>
     </ul>
   </div>
+  <img src="/images/icons/hamburger.png" class="mobile" onclick="showMenu()">
 </nav>
 `
 	}
@@ -98,3 +101,15 @@ const optionMenu = document.querySelector(".options"),
 
 selectBtn.addEventListener("click", () => {setTimeout(() => optionMenu.classList.add("active"), 1)})
 document.addEventListener("click", () => optionMenu.classList.remove("active"))
+
+// Responsive navigation
+
+var navLinks = document.getElementById("navLinks")
+
+function showMenu(){
+  navLinks.style.right = "0"
+}
+
+function hideMenu(){
+  navLinks.style.right = "-200px";
+}

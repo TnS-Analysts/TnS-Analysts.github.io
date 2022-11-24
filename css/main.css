@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
+html, body {
+  overflow-x: hidden;
+  /*max-width: 100%;*/
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -10,6 +15,7 @@
 
 h1, h2, h3, h4{ 
   font-family: 'Comfortaa', sans-serif;
+	line-height: 1.25em;
 }
 
 /* HEADER */
@@ -112,7 +118,7 @@ nav button {
 	outline: none;
 }
 
-.nav-links img {
+.nav-links img{
 	display: inline-block;
 	max-width: 1em;
 	max-height: 1em;
@@ -233,6 +239,16 @@ footer .copyright{
 .main .letter{
 	font-weight: bolder;
 	color: gray;
+}
+
+.main li{
+	/*list-style: none;*/
+	list-style-position: inside;
+	line-height: 1.5em;
+}
+
+.main li p{
+	padding: 10px 0;
 }
 
 .container{
@@ -499,4 +515,108 @@ footer .copyright{
 .show{
 	opacity: 1;
 	transform: translateX(0%);
+}
+
+/* responsive */
+
+img.mobile{
+	display: none;
+}
+
+@media(max-width: 700px){
+	.mobile{
+		display: inline-block;
+	}
+
+	img.mobile{
+		display: inline-block;
+		margin: 10px;
+		max-width: 1.5em;
+		max-height: 1.5em;
+		filter: invert(1);
+	}
+
+	.header .text-box{
+		font-size: 2em;
+	}
+
+	.nav-links ul li{
+		display: block;
+	}
+
+	.nav-links ul{
+		padding: 30px;
+	}
+
+	.nav-links{
+		position: fixed;
+		background: #985a27;
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right: -400px;
+		text-align: left;
+		z-index: 2;
+		transition: 0.7s ease;
+	}
+
+	.drop-btn{
+		text-align: left;
+	}
+
+	nav .text::after{
+		display: none;
+	}
+
+	.row{
+		flex-direction: column;
+		row-gap: 20px;
+		margin-bottom: 20px;
+	}
+
+	.main{
+		font-size: 1em;
+	}
+
+	.main p{
+		text-indent: 40px;
+		line-height: 1.5em;
+	}
+
+	.main h1{
+	  font-size: 2em;
+	}
+
+	.main h2{
+	  font-size: 1.25em;
+	}
+
+	.container{
+		flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  column-gap: 40px;
+	}
+
+	.container img{
+	  width: 100%;
+	}
+
+	.text-left{
+		min-width: 100%;
+		max-width: 100%;
+	}
+
+	.image-left{
+		min-width: 100%;
+		max-width: 100%;
+	}
+
+	.right{
+		flex-grow: 1;
+	}
+
+	.container:has(.image-left){
+		flex-direction: column-reverse;
+	}
 }
