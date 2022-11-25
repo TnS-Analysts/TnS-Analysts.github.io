@@ -536,6 +536,10 @@ img.mobile{
 		filter: invert(1);
 	}
 
+	.pc{
+		display: none;
+	}
+
 	.header .text-box{
 		font-size: 2em;
 	}
@@ -618,5 +622,13 @@ img.mobile{
 
 	.container:has(.image-left){
 		flex-direction: column-reverse;
+	}
+
+	.step5 .column img{
+		object-fit: contain;
+	}
+
+	.step5 .row img{
+		height: auto !important;
 	}
 }
