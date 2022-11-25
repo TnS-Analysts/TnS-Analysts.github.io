@@ -52,9 +52,9 @@ class WebsiteNav extends HTMLElement {
         </button>
       </div></li>
 
-      <li><span class="text"><a href="/index.html">About Us</a></span></li>
-      <li><span class="text"><a href="/index.html">Contact Us</a></span></li>
-      <li><span class="text"><a href="/index.html">Our Events</a></span></li>
+      <li><span class="text"><a href="/pages/about_us.html">About Us</a></span></li>
+      <li><span class="text"><a href="/pages/contact_us.html">Contact Us</a></span></li>
+      <li><span class="text"><a href="/pages/our_events.html">Our Events</a></span></li>
     </ul>
   </div>
   <img src="/images/icons/hamburger.png" class="mobile" onclick="showMenu()">
