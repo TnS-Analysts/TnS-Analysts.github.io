@@ -31,7 +31,7 @@ class WebsiteNav extends HTMLElement {
 	connectedCallback(){
 		this.innerHTML = `
 <nav>
-  <a href="/index.html"><img src="/images/logo_transparent.png"></a>
+  <a href="/index.html"><img src="/images/logo_vector.svg"></a>
   <div class="nav-links" id="navLinks">
     <img src="/images/icons/close.png" id="close" class="mobile" onclick="hideMenu()">
 
@@ -144,7 +144,7 @@ class WebsiteFooter extends HTMLElement {
             </div>
 
             <div class="footer-column">
-                <a href="/index.html"><img src="/images/logo_transparent.png"></a>
+                <a href="/index.html"><img src="/images/logo_vector.svg"></a>
             </div>
         </div>
         <div class="copyright">
