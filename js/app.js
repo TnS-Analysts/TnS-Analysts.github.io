@@ -121,6 +121,10 @@ class WebsiteNav extends HTMLElement {
   </div>
   <img src="/images/icons/hamburger.png" id="hamburger" class="mobile" onclick="showMenu()">
 </nav>
+
+<button onclick="backToTop()" id="backToTop">
+  <img src="/images/icons/up_arrow.png">
+</button>
 `
 	}
 }
@@ -202,4 +206,25 @@ function showMenu(){
 
 function hideMenu(){
   navLinks.style.left = "-250px"
+}
+
+// Back to top button
+
+var backToTopButton = document.getElementById("backToTop")
+
+window.onscroll = function() {scrollFunction()}
+
+function scrollFunction(){
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+    backToTopButton.style.opacity = "1"
+    backToTopButton.style.zIndex = "1"
+  } else {
+    backToTopButton.style.opacity = "0"
+    backToTopButton.style.zIndex = "-1"
+  }
+}
+
+function backToTop() {
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
 }
