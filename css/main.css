@@ -47,6 +47,13 @@ nav{
 	padding: 2% 6%;
 	justify-content: space-between;
 	align-items: center;
+	box-sizing: border-box;
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+	background-color: #1f0017;
+	max-height: 15vh;
+	box-shadow: 0 -5px 20px 5px rgba(0, 0, 0, 0.7);
 }
 
 nav img{
@@ -75,36 +82,34 @@ nav .text{
   display: inline-block;
 }
 
-nav .options .text {
-	text-align: left;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 1.25;
-}
-
 nav a {
 	color: white;
 	text-decoration: none;
 }
 
-nav .text::after{
-	content: '';
-	width: 0%;
-	height: 2px;
-	background: #daa520;
-	display: block;
-	margin: auto;
-	transition: 0.5s;
+@media(hover: hover){
+	nav .text::after{
+		content: '';
+		width: 0%;
+		height: 2px;
+		background: #daa520;
+		display: block;
+		margin: auto;
+		transition: 0.5s;
+	}
+
+	nav .text:hover::after{
+		width: 100%;
+	}
 }
 
-nav .text:hover::after{
-	width: 100%;
-}
+/* DROPDOWN */
 
 .dropdown {
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	align-items: center;
 }
 
 .drop-btn {
@@ -125,24 +130,34 @@ nav button {
 	filter: invert(1);
 }
 
+.options img{
+	max-width: 12px;
+	max-height: 12px;
+}
+
 .options {
 	display: flex;
-	top: 2em;
+	margin-top: 2em;
 	position: absolute;
 	flex-direction: column;
 	background-color: rgba(10, 10, 10, 0.7);
 	outline: solid #444 2px;
 	border-radius: 10px;
 	padding: 10px;
-	row-gap: 10px;
-
+	row-gap: 16px;
 	opacity: 0;
 	z-index: -1;
+
+/*	right: 20px;*/
 	transform: translateY(-20%);
 	transition: all 0.5s ease;
 }
 
-.options.active {
+.options, .more-options{
+	min-width: 120px;
+}
+
+.options.active{
 	opacity: 1;
 	z-index: 1;
 	transform: translateY(0);
@@ -155,6 +170,50 @@ nav button {
 
 .options.active ~ .drop-btn img {
 	transform: rotate(180deg);
+}
+
+.options .text, .more .text{
+	text-align: left;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.25;
+	margin: -8px -10px;
+	padding: 8px 10px;
+}
+
+/* DROPDOWN MORE */
+
+.more{
+	display: flex;
+	text-align: left;
+	position: relative;
+	margin: -8px -10px;
+	padding: 8px 10px;
+}
+
+.more-btn img{
+	transform: rotate(-90deg);
+}
+
+@media(hover: hover){
+	.more:hover .more-options, .more-options:hover{
+		display: flex;
+	}
+}
+
+.more-options{
+	display: none;
+	position: absolute;
+	flex-direction: column;
+	background-color: rgba(10, 10, 10, 0.7);
+	outline: solid #444 2px;
+	border-radius: 10px;
+	padding: 10px;
+	row-gap: 16px;
+
+	top: 0;
+	left: 100%;
+	transform: translateX(1px);
 }
 
 /* FOOTER */
@@ -530,7 +589,7 @@ img.mobile{
 
 	img.mobile{
 		display: inline-block;
-		margin: 10px;
+		padding: 10px;
 		max-width: 1.5em;
 		max-height: 1.5em;
 		filter: invert(1);
@@ -549,23 +608,29 @@ img.mobile{
 	}
 
 	.nav-links ul{
-		padding: 30px;
+		padding: 20px;
 	}
 
 	.nav-links{
 		position: fixed;
-		background: #985a27;
+		background: #000233;
 		height: 100vh;
 		width: 200px;
 		top: 0;
-		right: -400px;
+		left: -400px;
 		text-align: left;
 		z-index: 2;
+		box-shadow: -5px 0 20px 5px black;
 		transition: 0.7s ease;
 	}
 
 	.drop-btn{
 		text-align: left;
+		width: max-content;
+	}
+
+	nav{
+		justify-content: center;
 	}
 
 	nav .text::after{
@@ -630,5 +695,67 @@ img.mobile{
 
 	.step5 .row img{
 		height: auto !important;
+	}
+
+	#hamburger{
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		transform: translateY(-50%);
+	}
+
+	#close{
+		float: right;
+	}
+
+	.dropdown{
+		flex-direction: column-reverse;
+		width: max-content;
+		max-width: 140px;
+	}
+
+	.options{
+		all: unset;
+		position: relative;
+		display: none;
+		row-gap: 16px;
+
+		flex-direction: column;
+		padding: 16px 0 0 20px;
+		width: 89px;
+	}
+
+	.options.active{
+		display: flex;
+	}
+
+	.drop-btn img {
+		transition: unset;
+	}
+
+	.more{
+		flex-direction: column-reverse;
+	}
+
+	.more-options.active{
+		display: flex;
+	}
+
+	.more-options{
+		all: unset;
+		position: relative;
+		display: none;
+		row-gap: 16px;
+
+		flex-direction: column;
+		padding: 16px 0 0 20px;
+	}
+
+	.more-btn img {
+		transform: rotate(0deg);
+	}
+
+	.more-options.active ~ .more-btn img {
+		transform: rotate(180deg);
 	}
 }

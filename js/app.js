@@ -1,3 +1,16 @@
+// MEDIA QUERY
+
+let mediaQuery = window.matchMedia('(max-width: 600px)')
+ 
+function widthChangeCallback(myMediaQuery) {
+  mediaQuery = window.matchMedia('(max-width: 600px)')
+}
+ 
+mediaQuery.addEventListener('change', widthChangeCallback)
+
+
+// SCROLL ANIMATION
+
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting){
@@ -20,27 +33,76 @@ class WebsiteNav extends HTMLElement {
 <nav>
   <a href="/index.html"><img src="/images/logo_transparent.png"></a>
   <div class="nav-links" id="navLinks">
-    <img src="/images/icons/close.png" class="mobile" onclick="hideMenu()">
+    <img src="/images/icons/close.png" id="close" class="mobile" onclick="hideMenu()">
 
     <ul>
       <li><span class="text"><a href="/index.html">Home</a></span></li>
 
       <li><div class="dropdown">
         <div class="options">
-          <div class="drop-option">
-            <a href="/pages/basic_information.html" class="mobile">
+          <div class="more">
+            <div class="more-options">
               <span class="text">
-                EG7 Experience 1 (Part 1)
+                <a href="/pages/basic_information.html" class="mobile">
+                  EG7 Experience 1 (Part 1)
+                </a>
               </span>
-            </a>
+
+              <span class="text">
+                <a href="/pages/basic_information.html" class="mobile">
+                  EG7 Experience 1 (Part 2)
+                </a>
+              </span>
+            </div>
+
+            <button class="more-btn">
+              <span class="text">
+                Quarter 1
+                <img src="/images/icons/arrow.png">
+              </span>
+            </button>
           </div>
 
-          <div class="drop-option">
-            <a href="/pages/journey.html">
+
+          <div class="more">
+            <div class="more-options">
               <span class="text">
-                EG7 Experience 1 (Part 2)
+                <a href="" class="mobile">
+                  Stream Outline
+                </a>
               </span>
-            </a>
+            </div>
+
+            <button class="more-btn">
+              <span class="text">
+                Quarter 2
+                <img src="/images/icons/arrow.png">
+              </span>
+            </button>
+          </div>
+
+
+          <div class="more">
+
+
+            <button class="more-btn">
+              <span class="text">
+                Quarter 3
+                <img src="/images/icons/arrow.png">
+              </span>
+            </button>
+          </div>
+
+
+          <div class="more">
+
+
+            <button class="more-btn">
+              <span class="text">
+                Quarter 4
+                <img src="/images/icons/arrow.png">
+              </span>
+            </button>
           </div>
         </div>
 
@@ -57,7 +119,7 @@ class WebsiteNav extends HTMLElement {
       <li><span class="text"><a href="/pages/our_events.html">Our Events</a></span></li>
     </ul>
   </div>
-  <img src="/images/icons/hamburger.png" class="mobile" onclick="showMenu()">
+  <img src="/images/icons/hamburger.png" id="hamburger" class="mobile" onclick="showMenu()">
 </nav>
 `
 	}
@@ -95,21 +157,49 @@ customElements.define('website-footer', WebsiteFooter)
 
 
 // Navigation script
+const dropBtn = document.getElementsByClassName("drop-btn")
 
-const optionMenu = document.querySelector(".options"),
-       selectBtn = document.querySelector(".drop-btn")
+for (i = 0; i < dropBtn.length; i++){
+  let b = dropBtn[i]
+  let p = b.parentElement
+  let o = p.querySelector(".options")
 
-selectBtn.addEventListener("click", () => {setTimeout(() => optionMenu.classList.add("active"), 1)})
-document.addEventListener("click", () => optionMenu.classList.remove("active"))
+  b.addEventListener("click", function() {
+    o.classList.toggle("active")
+  })
+
+  if (!mediaQuery.matches){
+    document.addEventListener('click', event => {
+      const isClickInside = p.contains(event.target)
+
+      if (!isClickInside) {
+        o.classList.remove("active")
+      }
+    })
+  }
+}
+
+// Multi-level navigation script
+const moreBtn = document.getElementsByClassName("more-btn")
+
+for (i = 0; i < moreBtn.length; i++){
+  let b = moreBtn[i]
+  let p = b.parentElement
+  let o = p.querySelector(".more-options")
+
+  b.addEventListener("click", function() {
+    o.classList.toggle("active")
+  })
+}
 
 // Responsive navigation
 
 var navLinks = document.getElementById("navLinks")
 
 function showMenu(){
-  navLinks.style.right = "0"
+  navLinks.style.left = "0"
 }
 
 function hideMenu(){
-  navLinks.style.right = "-200px";
+  navLinks.style.left = "-250px"
 }
