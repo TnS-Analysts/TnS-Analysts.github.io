@@ -134,20 +134,35 @@ class WebsiteFooter extends HTMLElement {
 		this.innerHTML = `
 <footer>
     <div class="footer-main">
-        <div class="footer-row">
-            <div class="footer-column">
-                <h1>Contact Us</h1>
-                <strong>Gmails:</strong>
-                <p>ap.ryzaeireene.uy@apecschools.edu.ph</p>
-                <p>ap.vincentwilliam.rodriguez@apecschools.edu.ph</p>
-                <p>ap.cayril.aguilar@apecschools.edu.ph</p>
-            </div>
+        <div class="footer-column">
+          <a href="/index.html"><img src="/images/logo_vector.svg" id="logo"></a>
+          <h1>T&S Analysts</h1>
+          <p>My heart and actions are utterly unclouded. They are all those of 'Justice'.</p>
 
-            <div class="footer-column">
-                <a href="/index.html"><img src="/images/logo_vector.svg"></a>
-            </div>
+          <div class="social-media-buttons">
+            <a href="https://github.com/TnS-Analysts">
+              <div class="social-media"><img src="/images/icons/github.png"></div>
+            </a>
+
+            <a href="">
+              <div class="social-media"><img src="/images/icons/twitter.png"></div>
+            </a>
+
+            <a href="">
+              <div class="social-media"><img src="/images/icons/youtube.png"></div>
+            </a>
+
+            <a href="">
+              <div class="social-media"><img src="/images/icons/instagram.png"></div>
+            </a>
+
+            <a href="">
+              <div class="social-media"><img src="/images/icons/facebook.png"></div>
+            </a>
+          </div>
         </div>
-        <div class="copyright">
+
+        <div class="footer-column copyright">
             <p>© 2022 T&S Analysts. All rights reserved.</p> 
         </div>
     </div>
