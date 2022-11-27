@@ -315,6 +315,7 @@ footer p{
 
 footer .social-media-buttons{
 	column-gap: 12px;
+	justify-content: center;
 }
 
 footer .social-media{
@@ -785,13 +786,12 @@ footer .footer-column.copyright{
 }
 
 .contact-form .input-box input[type="submit"]:hover{
-	filter: brightness(1.1);
+	filter: brightness(0.95);
 }
 
 .social-media-buttons{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
 	column-gap: 15px;
 	row-gap: 15px;
 	margin-top: 5px;
