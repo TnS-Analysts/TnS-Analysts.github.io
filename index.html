@@ -12,17 +12,35 @@
       @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
 
       .header {
-        /*background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/home_header.jpg);*/
+        background-image: linear-gradient(rgba(97, 0, 39, 0.8), rgba(97, 0, 39, 0.8)), url(images/home_header_bg.png);
+      }
+
+      
+      .main h1:after{
+        content:' ';
+        display:block;
+        margin-top: 5px;
+        border:2px solid #5c0d0277;
+        border-radius:4px;
       }
       
       .column img {height: 350px;}
 
-      .our_team, .wisdom{
-        background-color: #d3c1b3;
+      .wisdom{
+        background-color: #d8f2ff;
+      }
+
+      .wisdom h1{
+        font-size: 1.75em;
+      }
+
+      .wisdom img{
+        object-fit: contain;
+        max-height: 270px;
       }
 
       .goals{
-        background-color: #f9f7f0;
+        background-color: #ffe8f0;
       }
     </style>
   </head>
@@ -41,13 +59,13 @@
       <!--GOALS & PURPOSE-->
       <div class ="background goals"><div class ="content hidden">
         <div class="container c_reverse">
-          <div class="image-left">
-            <img src="images/goals.png">
+          <div class="text-left">
+            <h1> Our Goals & Purpose</h1><br>
+            <p> We aspire and strive for knowledge, understanding, and greater good, which we believe we can achieve through research, analysis, and learning, and we will persevere even when we are tired and stressed to help and aid the betterment of the world. We are T&S Analysts at your service. </p>
           </div>
           
           <div class="right">
-            <h1> Our Goals & Purpose</h1>
-            <p> We aspire and strive for knowledge, understanding, and greater good, which we believe we can achieve through research, analysis, and learning, and we will persevere even when we are tired and stressed to help and aid the betterment of the world. We are T&S Analysts at your service. </p>
+            <img src="images/goals.png">
           </div>
         </div>
       </div></div>
@@ -55,13 +73,13 @@
       <!--Wisdom-->
       <div class="background wisdom"><div class="content hidden">
         <div class="container">
-          <div class="text-left">
-            <h1>“Wisdom comes not from age, but from education and learning.”</h1>
-            <p>We are APEC Schools Ortigas Extension Grade 10 students from section B09-10-S1-2. We may only be students, but we at APEC schools are always taught that we must learn to be better each day.</p>
+          <div class="image-left">
+            <img src="images/wisdom.png">
           </div>
 
           <div class="right">
-            <img src="images/wisdom.png" style="flex-grow: 1;"/>
+            <h1>“Wisdom comes not from age, but from education and learning.”</h1><br>
+            <p>We are APEC Schools Ortigas Extension Grade 10 students from section B09-10-S1-2. We may only be students, but we at APEC schools are always taught that we must learn to be better each day.</p>
           </div>
         </div>
       </div></div>

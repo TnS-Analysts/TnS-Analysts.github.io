@@ -137,7 +137,7 @@ class WebsiteFooter extends HTMLElement {
         <div class="footer-column">
           <a href="/index.html"><img src="/images/logo_vector.svg" id="logo"></a>
           <h1>T&S Analysts</h1>
-          <p>My heart and actions are utterly unclouded. They are all those of 'Justice'.</p>
+          <p>Got any suggestion or feedback? Contact us through our social media below:</p>
 
           <div class="social-media-buttons">
             <a href="https://github.com/TnS-Analysts">
@@ -148,11 +148,11 @@ class WebsiteFooter extends HTMLElement {
               <div class="social-media"><img src="/images/icons/twitter.png"></div>
             </a>
 
-            <a href="">
+            <a href="https://www.youtube.com/@TnS_Analyst">
               <div class="social-media"><img src="/images/icons/youtube.png"></div>
             </a>
 
-            <a href="">
+            <a href="https://www.instagram.com/ts_analysts/">
               <div class="social-media"><img src="/images/icons/instagram.png"></div>
             </a>
 
