@@ -43,13 +43,13 @@ class WebsiteNav extends HTMLElement {
           <div class="more">
             <div class="more-options">
               <span class="text">
-                <a href="/pages/basic_information.html" class="mobile">
+                <a href="/pages/Q1/basic_information.html" class="mobile">
                   EG7 Experience 1 (Part 1)
                 </a>
               </span>
 
               <span class="text">
-                <a href="/pages/basic_information.html" class="mobile">
+                <a href="/pages/Q1/basic_information.html" class="mobile">
                   EG7 Experience 1 (Part 2)
                 </a>
               </span>
@@ -67,8 +67,8 @@ class WebsiteNav extends HTMLElement {
           <div class="more">
             <div class="more-options">
               <span class="text">
-                <a href="" class="mobile">
-                  Stream Outline
+                <a href="/pages/Q2/outline_plan.html" class="mobile">
+                  Stream Outline & Promotional Plan
                 </a>
               </span>
             </div>
