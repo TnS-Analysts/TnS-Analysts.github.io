@@ -9,17 +9,25 @@
     <script defer src="/js/app.js"></script>
 
     <style>
-      .first .column{
-        row-gap: 20px;
+      .main h1{
+        text-align: center;
       }
 
-      .first .column img{
+      .posters{
+        background-color: #d8f2ff;
+      }
+
+      .posters .column{
+        row-gap: 30px;
+      }
+
+      .posters .column img{
         height: unset;
-        border: 1px solid #4d0038af;
+        box-shadow: 0 0 10px 0 #4d003855;
         transition: 0.5s;
       }
 
-      .first .column img:hover{
+      .posters .column img:hover{
         box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7);
       }
     </style>
@@ -30,13 +38,14 @@
     <section class="header">
       <website-nav></website-nav>
       <div class="text-box">
-        <h1></h1>
+        <h1>Our Events</h1>
       </div>
     </section>
 
     <section class="main">
-      <div class="background first"><div class="content hidden">
+      <div class="background posters"><div class="content hidden">
         <div class="column">
+          <h1>Promotional Posters</h1>
           <img src="/images/promotional_materials/poster1.png">
           <img src="/images/promotional_materials/poster2.png">
         </div>

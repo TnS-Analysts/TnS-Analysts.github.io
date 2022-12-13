@@ -162,7 +162,7 @@ class WebsiteFooter extends HTMLElement {
               <div class="social-media"><img src="/images/icons/instagram.png"></div>
             </a>
 
-            <a href="">
+            <a href="https://www.facebook.com/profile.php?id=100088225345938">
               <div class="social-media"><img src="/images/icons/facebook.png"></div>
             </a>
           </div>

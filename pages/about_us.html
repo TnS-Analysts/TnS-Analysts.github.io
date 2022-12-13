@@ -9,7 +9,15 @@
     <script defer src="/js/app.js"></script>
 
     <style>
-      .our_team h1{
+      .our_team{
+        background-color: #d8f2ff;
+      }
+
+      .description{
+        background-color: #ffe8f0;
+      }
+
+      .our_team h1, .description h1{
         text-align: center;
       }
 
@@ -17,13 +25,19 @@
         align-items: center;
       }
 
-      .our_team img{
+      .our_team img, .description img{
         max-width: 170px;
         max-height: 170px;
         border-radius: 50%;
         border: 5px solid #562b1a;
         padding: 7px;
         background-color: #b29f91;
+      }
+
+      .right img{
+        float: right;
+        min-width: 350px;
+        min-height: 350px;
       }
     </style>
   </head>
@@ -75,13 +89,22 @@
           </div>
         </div>
       </div></div>
+
+      <div class="background description"><div class="content hidden">
+        <div class="container">
+          <div class="text-left">
+            <h1>About Us</h1>
+            <br>
+            <p>Good day! We are the T&S Analysts, the ever-so-handsome and beautiful Group 9 of B09-10-S1-2 from APEC Schools Ortigas Extension. As a Lifelabs Project, we are challenged to create a stream that will showcase our research on the  “Effects of Various Musical Genres on Students’ Productivity.”</p>
+          </div>
+
+          <div class="right">
+            <img src="/images/music_listening.png">
+          </div>
+        </div>
+      </div></div>
     </section>
 
-    <div class="background our_team"><div class="content hidden">
-      <h1>About Us</h1>
-      <br>
-      <p>Good day! We are T&S Analysts. The ever-so-handsome and beautiful Group 9 of B09-10-S1-2 from APEC Schools Ortigas Extension.  As a Lifelabs Project, we are challenged to create a  stream that will showcase our research on " The  “Effects of Various Musical Genres on Students’ Productivity”</p>
-    </div></div>
     <!--Footer-->
     <website-footer></website-footer>
   </body>

@@ -114,6 +114,11 @@ nav a {
 	align-items: center;
 }
 
+.dropdown img{
+  user-select: none;
+  pointer-events: none;
+}
+
 .drop-btn {
 	width: 150px;
 	position: relative;
@@ -254,6 +259,8 @@ nav button {
 }
 
 #backToTop img{
+  user-select: none;
+  pointer-events: none;
 	max-width: 70%;
 	max-height: 70%;
 	filter: invert(100%);
@@ -826,6 +833,8 @@ footer .footer-column.copyright{
 	width: 50%;
 	object-fit: cover;
 	filter: invert(100%);
+  user-select: none;
+  pointer-events: none;
 }
 
 /*               RESPONSIVE                  */
