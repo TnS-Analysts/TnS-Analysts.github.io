@@ -165,7 +165,11 @@ nav button {
 	pointer-events: auto;
 }
 
-.options, .more-options{
+.options{
+	min-width: 85px;
+}
+
+.more-options{
 	min-width: 120px;
 }
 

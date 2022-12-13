@@ -67,6 +67,12 @@ class WebsiteNav extends HTMLElement {
           <div class="more">
             <div class="more-options">
               <span class="text">
+                <a href="/pages/Q2/stream_design.html" class="mobile">
+                  Stream Design
+                </a>
+              </span>
+
+              <span class="text">
                 <a href="/pages/Q2/outline_plan.html" class="mobile">
                   Stream Outline & Promotional Plan
                 </a>
