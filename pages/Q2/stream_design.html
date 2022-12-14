@@ -21,14 +21,10 @@
         row-gap: 20px;
       }
 
-      .first .column img{
-        height: unset;
-        box-shadow: 0 0 10px 0 #4d003855;
-        transition: 0.5s;
-      }
-
-      .first .column img:hover{
-        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7);
+      @media(max-width: 700px){
+        .first{
+          padding: 0;
+        }
       }
     </style>
   </head>
@@ -44,12 +40,30 @@
 
     <section class="main">
       <div class="background first"><div class="content hidden">
-        <h1>The Layout of the Stream</h1><br>
-        <div class="column">
-          <img src="/images/stream_design/1.png">
-          <img src="/images/stream_design/7.png">
-          <img src="/images/stream_design/5.png">
-          <img src="/images/stream_design/6.png">
+        <h1>Stream Layout</h1><br>
+        <div class="slider-container">
+          <div class="slider">
+            <img src="/images/stream_design/1.png">
+          </div>
+          <div class="slider">
+            <img src="/images/stream_design/7.png">
+          </div>
+          <div class="slider">
+            <img src="/images/stream_design/5.png">
+          </div>
+          <div class="slider">
+            <img src="/images/stream_design/6.png">
+          </div>
+
+          <div class="prev-button" onclick="plusSlide(-1)"> < </div>
+          <div class="next-button" onclick="plusSlide(1)"> > </div>
+
+          <div class="lines">
+            <div class="line" onclick="currentSlide(1)"></div>
+            <div class="line" onclick="currentSlide(2)"></div>
+            <div class="line" onclick="currentSlide(3)"></div>
+            <div class="line" onclick="currentSlide(4)"></div>
+          </div>
         </div>
       </div></div>
     </section>

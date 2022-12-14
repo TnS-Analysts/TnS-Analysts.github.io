@@ -38,6 +38,7 @@ h1, h2, h3, h4{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	margin-top: 3.75vh;
 	text-align: left;
 	font-size: 48px;
 }
@@ -837,6 +838,90 @@ footer .footer-column.copyright{
   pointer-events: none;
 }
 
+/* SLIDESHOW SLIDER */
+
+.slider-container{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 800px;
+	height: auto;
+	margin: auto;
+	box-shadow: 0 0 10px 0 #4d003855;
+	border-radius: 15px;
+}
+
+.slider-container img{
+	justify-content: center;
+	width: 100%;
+	vertical-align: middle;
+	border-radius: 15px;
+}
+
+.prev-button, .next-button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	font-size: 40px;
+	color: #ffffffcc;
+	font-weight: bolder;
+	user-select: none;
+	cursor: pointer;
+	transition: color 0.5s ease;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.prev-button{
+	left: 0;
+}
+
+.next-button{
+	right: 0;
+}
+
+.prev-button:hover, .next-button:hover{
+	color: white;
+}
+
+.lines{
+	position: absolute;
+	display: flex;
+	bottom: 10px;
+}
+
+.line{
+	padding: 1.5px 10px;
+	margin: 0 3px;
+	background-color: #ffffff99;
+	cursor: pointer;
+	transition: background-color 0.5 ease;
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.9);
+}
+
+.line:hover, .active-sl{
+	background-color: white;
+}
+
+.slider{
+	display: none;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade{
+	from{
+		opacity: 0.8;
+	}
+
+	to{
+		opacity: 1;
+	}
+}
+
 /*               RESPONSIVE                  */
 
 img.mobile{
@@ -860,9 +945,14 @@ img.mobile{
 		display: none;
 	}
 
- .header{
- 	min-height: 70vh;
- }
+	.header, .background{
+ 		min-height: 70vh;
+	}
+
+	.background{
+ 		min-height: 50vh;
+ 		padding: 30px 0;
+	}
 
 	.header .text-box{
 		font-size: 2em;
@@ -1052,5 +1142,16 @@ img.mobile{
 
 	.contact-text b{
 		font-size: 16px;
+	}
+
+	/* responsive slideshow/slider */
+	.prev-button, .next-button{
+		height: 30px;
+		width: 30px;
+		font-size: 30px;
+	}
+
+	.line{
+		padding: 1px 8px;
 	}
 }
