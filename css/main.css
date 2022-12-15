@@ -255,7 +255,7 @@ nav button {
 	border-radius: 50%;
 	outline: none;
 	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
-	background: #eb00ac99;
+	background: #a3007899;
 
 	opacity: 0;
 	z-index: -1;
@@ -271,7 +271,7 @@ nav button {
 	max-width: 70%;
 	max-height: 70%;
 	filter: invert(100%);
-	opacity: 0.5;
+	opacity: 0.7;
 	transition: all 0.5s ease;
 }
 
@@ -279,7 +279,7 @@ nav button {
 	transform: scale(1.15);
 	transform-origin: center;
 	filter: brightness(1.5);
-	background-color: #eb00acdd;
+	background-color: #a30078dd;
 }
 
 #backToTop:hover img{
@@ -967,8 +967,8 @@ img.mobile{
  		padding: 30px 0;
 	}
 
-	.header .text-box{
-		font-size: 2em;
+	.header .text-box h1{
+		font-size: 3em !important;
 	}
 
 	.nav-links ul li{
