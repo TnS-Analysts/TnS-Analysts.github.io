@@ -24,7 +24,7 @@ h1, h2, h3, h4{
 .header{
 	min-height: 100vh;
 	width: 100%;
-	background-image: linear-gradient(to top, #d3337f99, #d3337f99), url(/images/_main_background.png);
+	background-image: linear-gradient(to top, #d3337f99, #d3337f99), url(/images/main_background.png);
 	background-size: cover;
 	background-color: rgba(4, 9, 30, 1);
 	position: relative;
