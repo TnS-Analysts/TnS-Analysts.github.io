@@ -49,7 +49,7 @@ class WebsiteNav extends HTMLElement {
               </span>
 
               <span class="text">
-                <a href="/pages/Q1/basic_information.html" class="mobile">
+                <a href="/pages/Q1/journey.html" class="mobile">
                   EG7 Experience 1 (Part 2)
                 </a>
               </span>

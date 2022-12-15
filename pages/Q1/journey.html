@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="/css/main.css">
     <script defer src="/js/app.js"></script>
     <style type="text/css">
-      .intro {background-image: linear-gradient(rgba(249, 247, 240, 0.8), rgba(249, 247, 240, 0.8)), url(/images/background6.png);}
+      .header .text-box h1{
+        font-size: 84px;
+      }
+      
+      /*.intro {background-image: linear-gradient(rgba(249, 247, 240, 0.8), rgba(249, 247, 240, 0.8)), url(/images/background6.png);}
 
       .step1 {background-image: linear-gradient(rgba(211, 193, 179, 0.95), rgba(211, 193, 179, 0.95)), url(/images/background3.png);}
 
@@ -18,7 +22,15 @@
 
       .step4 {background-image: linear-gradient(rgba(249, 247, 240, 0.4), rgba(249, 247, 240, 0.4)), url(/images/background2.png);}
 
-      .step5 {background-image: linear-gradient(rgba(211, 193, 179, 0.95), rgba(211, 193, 179, 0.95)), url(/images/background4.png);}
+      .step5 {background-image: linear-gradient(rgba(211, 193, 179, 0.95), rgba(211, 193, 179, 0.95)), url(/images/background4.png);}*/
+
+      .intro, .step2, .step4{
+        background-color: #d8f2ff;
+      }
+
+      .step1, .step3, .step5{
+        background-color: #ffe8f0;
+      }
 
       .step2 h1, .step3 h1 {text-align: center;}
       .step3 .row strong {color: white;}
@@ -26,6 +38,11 @@
       .step5 h1 {text-align: center ;}
       .step5 .row .column {flex-basis: 100%;}
       .step5 .row img {height: 500px;}
+
+      .step3 .survey,
+      .step5 #methods img{
+        box-shadow: 0 0 10px 0 #4d003855;
+      }
     </style>
   </head>
 
@@ -247,10 +264,10 @@
       </div></div>
 
       <div class="background step5"><div class="content hidden">
-        <h1>Step: 5: Finding the needs of our Viewers</h1>
+        <h1>Step 5: Finding the needs of our Viewers</h1>
         <p>To find out what our viewers needed, we had to first empathize with them. To accomplish this, we used the empathizing methods of <strong>Asking the 5 Whys</strong> and <strong>What-How-Why</strong> on the problem that we are attempting to address, which is that students in the online setting are prone to periods of unproductivity and demotivation, which is detrimental to their learning and academic progress. These methods enabled us to discard our assumptions about the viewer's needs and gain insight into what they truly needed.</p>
 
-        <div class="row">
+        <div class="row" id="methods">
           <div class="column">
             <img src="/images/step5/1.png">
             <strong>'Asking the 5 Whys' Method</strong>
