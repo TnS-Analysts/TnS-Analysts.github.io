@@ -73,8 +73,8 @@ class WebsiteNav extends HTMLElement {
               </span>
 
               <span class="text">
-                <a href="/pages/Q2/outline_plan.html" class="mobile">
-                  Stream Outline & Promotional Plan
+                <a href="/pages/Q2/promotional_plan.html" class="mobile">
+                  Promotional Plan
                 </a>
               </span>
             </div>
