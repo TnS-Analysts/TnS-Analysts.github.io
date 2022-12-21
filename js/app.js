@@ -146,23 +146,23 @@ class WebsiteFooter extends HTMLElement {
           <p>Got any suggestion or feedback? Contact us through our social media below:</p>
 
           <div class="social-media-buttons">
-            <a href="https://github.com/TnS-Analysts">
+            <a href="https://github.com/TnS-Analysts" target="_blank">
               <div class="social-media"><img src="/images/icons/github.png"></div>
             </a>
 
-            <a href="">
+            <a href="https://twitter.com/TnSAnalysts" target="_blank">
               <div class="social-media"><img src="/images/icons/twitter.png"></div>
             </a>
 
-            <a href="https://www.youtube.com/@TnS_Analyst">
+            <a href="https://www.youtube.com/@TnS_Analyst" target="_blank">
               <div class="social-media"><img src="/images/icons/youtube.png"></div>
             </a>
 
-            <a href="https://www.instagram.com/ts_analysts/">
+            <a href="https://www.instagram.com/ts_analysts/" target="_blank">
               <div class="social-media"><img src="/images/icons/instagram.png"></div>
             </a>
 
-            <a href="https://www.facebook.com/profile.php?id=100088225345938">
+            <a href="https://www.facebook.com/profile.php?id=100088225345938" target="_blank">
               <div class="social-media"><img src="/images/icons/facebook.png"></div>
             </a>
           </div>
