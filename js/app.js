@@ -257,8 +257,10 @@ var i = 0
 var slider = document.getElementsByClassName("slider")
 var line = document.getElementsByClassName("line")
 
-currentSlide(1)
-// auto()
+if (slider.length > 0 && line.length > 0){
+  currentSlide(1)
+  // auto()
+}
 
 function show(n){
   for(i = 0; i < slider.length; i++){
