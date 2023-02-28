@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css"/>
     <script defer src="/js/app.js"></script>
+    <script src="https://cdn.plyr.io/3.7.3/plyr.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const player = Plyr.setup('.js-player');
+      });
+    </script>
 
     <style>
       .main h1{
         text-align: center;
       }
 
-      .outline{
+      .outline, .first_stream{
         background-color: #d8f2ff;
       }
 
@@ -44,18 +51,46 @@
         background-color: #ffe8f0;
       }
 
-      .posters .column{
+      /*.posters .column{
         row-gap: 30px;
+      }*/
+
+      .posters .row .col{
+        max-width: 56%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+/*        align-items: space-between;*/
       }
 
-      .posters .column img{
-        height: unset;
+      .posters .row img{
+        object-fit: contain;
+        max-width: 100%;
+        border-radius: 10px;
         box-shadow: 0 0 10px 0 #4d003855;
         transition: 0.5s;
       }
 
-      .posters .column img:hover{
+      .posters .row img:hover{
         box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7);
+      }
+
+      .first_stream input{
+        border-radius: 10px;
+        transition: 0.5s ease;
+        cursor: pointer;
+        background: #3b5998;
+        color: white;
+        padding: 10px 15px;
+        border-right: 1px #000033 solid;
+        border-bottom: 1px #000033 solid;
+        border-top: 0px;
+        border-left: 0px;
+        font-size: 1.25em;
+      }
+
+      .first_stream input:hover{
+        filter: brightness(1.1);
       }
     </style>
   </head>
@@ -73,7 +108,7 @@
       <div class="background outline"><div class="content hidden">
         <h1>Stream Outline</h1>
         <br>
-        <div style="overflow-x:auto;">
+        <div class="shadow" style="overflow-x:auto;">
           <table>
             <tr>
               <th width="14.25%">Time</th>
@@ -181,11 +216,34 @@
       </div></div>
 
       <div class="background posters"><div class="content hidden">
-        <div class="column">
-          <h1>Promotional Posters</h1>
-          <img src="/images/promotional_materials/new_poster1.png">
-          <img src="/images/promotional_materials/new_poster2.png">
+        <h1>Promotional Materials</h1>
+        <div class="row">
+          <div class="col">
+            <img class="shadow" src="/images/promotional_materials/new_poster1.png">
+          </div>
+          
+          <div class="col">
+            <img class="shadow" src="/images/promotional_materials/new_poster2.png">
+            <div class="shadow">
+              <video class="js-player" id="player" playsinline controls>
+                <source src="/images/promotional_materials/teaser.mp4" type="video/mp4"/>
+              </video>
+            </div>
+          </div>
         </div>
+      </div></div>
+
+      <div class="background first_stream"><div class="content hidden">
+        <h1>First Stream</h1>
+        <div class="shadow">
+          <video class="js-player" id="player" playsinline controls>
+            <source src="/images/stream/stream1.mp4" type="video/mp4"/>
+          </video>
+        </div>
+        <br>
+        <a href="https://www.facebook.com/100088225345938/videos/865661594489363">
+          <input class="shadow" type="button" value="View on Facebook">
+        </a>
       </div></div>
     </section>
 
