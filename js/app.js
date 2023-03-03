@@ -11,18 +11,19 @@ mediaQuery.addEventListener('change', widthChangeCallback)
 
 // SCROLL ANIMATION
 
-const observer = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting){
-			entry.target.classList.add("show")
-		} //else {
-		// 	entry.target.classList.remove("show")
-		// }
-	})
-})
+// const observer = new IntersectionObserver((entries) => {
+// 	entries.forEach((entry) => {
+//     console.log("Awaw")
+// 		if (entry.isIntersecting){
+// 			entry.target.classList.add("show")
+// 		} //else {
+// 		// 	entry.target.classList.remove("show")
+// 		// }
+// 	})
+// })
 
-const hiddenElements = document.querySelectorAll(".hidden")
-hiddenElements.forEach((el) => observer.observe(el))
+// const hiddenElements = document.querySelectorAll(".hidden")
+// hiddenElements.forEach((el) => observer.observe(el))
 
 
 // CUSTOM HTML ELEMENT
@@ -177,8 +178,20 @@ class WebsiteFooter extends HTMLElement {
 	}
 }
 
+class TableOfContents extends HTMLElement {
+  connectedCallback(){
+    this.innerHTML = `
+<div id='console'></div>
+<div id="toc">
+    <h3>Table of Contents</h3>
+</div>
+`
+  }
+}
+
 customElements.define('website-nav', WebsiteNav)
 customElements.define('website-footer', WebsiteFooter)
+customElements.define('table-of-contents', TableOfContents)
 
 
 // Navigation script
@@ -303,3 +316,57 @@ function currentSlide(n){
   show(index)
 }
 
+
+// Table Of Contents
+
+
+
+var c = function() {
+    return({
+        log: function(msg) {
+          consoleDiv = document.getElementById('console');
+          para = document.createElement('p');
+          text = document.createTextNode(msg);
+          para.appendChild(text);
+          consoleDiv.appendChild(para);
+        }
+    });
+}();
+
+window.onload = function () {
+    var toc = ""
+    var level = 0
+    var maxLevel = 3
+
+    document.getElementById("contents").innerHTML =
+        document.getElementById("contents").innerHTML.replace(
+            /<h([\d])>([^<]+)<\/h([\d])>/gi,
+            function (str, openLevel, titleText, closeLevel) {
+                if (openLevel != closeLevel) {
+         c.log(openLevel)
+                    return str + ' - ' + openLevel
+                }
+
+                if (openLevel > level) {
+                    toc += (new Array(openLevel - level + 1)).join("<ol>")
+                } else if (openLevel < level) {
+                    toc += (new Array(level - openLevel + 1)).join("</ol>")
+                }
+
+                level = parseInt(openLevel);
+
+                var anchor = titleText.replace(/ /g, "_");
+                toc += "<li><a href=\"#" + anchor + "\">" + titleText
+                    + "</a></li>";
+
+                return "<h" + openLevel + "><a name=\"" + anchor + "\">"
+                    + titleText + "</a></h" + closeLevel + ">";
+            }
+        );
+
+    if (level) {
+        toc += (new Array(level + 1)).join("</ol>")
+    }
+
+    document.getElementById("toc").innerHTML += toc;
+}

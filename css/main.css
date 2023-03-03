@@ -654,7 +654,7 @@ footer .footer-column.copyright{
 
 /* SCROLL ANIMATIONS */
 
-.hidden{
+/*.hidden{
 	opacity: 0;
 	transform: translateX(-20%);
 	transition: all 1.5s ease;
@@ -663,7 +663,7 @@ footer .footer-column.copyright{
 .show{
 	opacity: 1;
 	transform: translateX(0%);
-}
+}*/
 
 /* CONTACT US */
 
