@@ -359,8 +359,8 @@ window.onload = function () {
                 toc += "<li><a href=\"#" + anchor + "\"><p>" + titleText
                     + "</p></a></li>";
 
-                return "<h" + openLevel + "><a name=\"" + anchor + "\"><p>"
-                    + titleText + "</p></a></h" + closeLevel + ">";
+                return "<h" + openLevel + "><a name=\"" + anchor + "\">"
+                    + titleText + "</a></h" + closeLevel + ">";
             }
         );
 
