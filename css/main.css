@@ -59,6 +59,7 @@ nav{
 	align-items: center;
 	box-sizing: border-box;
 	position: fixed;
+	user-select: none;
 	width: 100%;
 	z-index: 5;
 	background-color: #1f0017;
@@ -68,6 +69,7 @@ nav{
 
 nav img{
 	width: 150px;
+	pointer-events: none;
 }
 
 .nav-links{
@@ -951,7 +953,8 @@ footer .footer-column.copyright{
 	display: flex;
 	flex-direction: row;
 	position: fixed;
-	top: 17vh;
+	user-select: none;
+	top: 18vh;
 	left: 3vh;
 	max-width: 300px;
 	border-radius: 10px;
@@ -967,6 +970,7 @@ footer .footer-column.copyright{
 	max-width: 20px;
 	max-height: 20px;
 	filter: invert(100%);
+	pointer-events: none;
 }
 
 #toc{
@@ -974,7 +978,7 @@ footer .footer-column.copyright{
 	max-width: 0px;
 	max-height: 0px;
 	opacity: 0;
-	transition: all 1s ease, opacity 0.5s ease 0.2s;
+	transition: all 1s ease, opacity 0.7s ease;
 }
 
 .toc-container:hover #toc{
@@ -995,6 +999,10 @@ footer .footer-column.copyright{
 #toc a{
 	color: #ddd;
 	text-decoration: none;
+}
+
+#toc p{
+	user-select: none;
 }
 
 #toc ul{
@@ -1244,5 +1252,10 @@ img.mobile{
 
 	.plan ul{
 		padding-left: 30px;
+	}
+
+	/* responsive table of contents */
+	.toc-container{
+		top: 15vh;
 	}
 }
