@@ -182,8 +182,11 @@ class TableOfContents extends HTMLElement {
   connectedCallback(){
     this.innerHTML = `
 <div id='console'></div>
-<div id="toc">
-    <h3>Table of Contents</h3>
+<div class="toc-container">
+  <img src="/images/icons/toc.png">
+  <div id="toc">
+      <h3>Table of Contents</h3>
+  </div>
 </div>
 `
   }
