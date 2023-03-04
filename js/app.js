@@ -90,7 +90,13 @@ class WebsiteNav extends HTMLElement {
 
 
           <div class="more">
-
+            <div class="more-options">
+              <span class="text">
+                <a href="/pages/Q3/stream_analysis.html" class="mobile">
+                  Stream Analysis
+                </a>
+              </span>
+            </div>
 
             <button class="more-btn">
               <span class="text">
