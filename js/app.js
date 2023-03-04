@@ -343,39 +343,41 @@ var c = function() {
 }();
 
 window.onload = function () {
-    var toc = ""
-    var level = 0
-    var maxLevel = 1
+  var toc = ""
+  var level = 0
+  var maxLevel = 1
 
+  if (!window.location.pathname.includes("our_events")){
     document.getElementById("contents").innerHTML =
-        document.getElementById("contents").innerHTML.replace(
-            /<h([\d])>([^<]+)<\/h([\d])>/gi,
-            function (str, openLevel, titleText, closeLevel) {
-                if (openLevel != closeLevel) {
-         c.log(openLevel)
-                    return str + ' - ' + openLevel
+            document.getElementById("contents").innerHTML.replace(
+                /<h([\d])>([^<]+)<\/h([\d])>/gi,
+                function (str, openLevel, titleText, closeLevel) {
+                    if (openLevel != closeLevel) {
+             c.log(openLevel)
+                        return str + ' - ' + openLevel
+                    }
+  
+                    if (openLevel > level) {
+                        toc += (new Array(openLevel - level + 1)).join("<ul>")
+                    } else if (openLevel < level) {
+                        toc += (new Array(level - openLevel + 1)).join("</ul>")
+                    }
+  
+                    level = parseInt(openLevel);
+  
+                    var anchor = titleText.replace(/ /g, "_");
+                    toc += "<li><a href=\"#" + anchor + "\"><p>" + titleText
+                        + "</p></a></li>";
+  
+                    return "<h" + openLevel + "><a name=\"" + anchor + "\">"
+                        + titleText + "</a></h" + closeLevel + ">";
                 }
-
-                if (openLevel > level) {
-                    toc += (new Array(openLevel - level + 1)).join("<ul>")
-                } else if (openLevel < level) {
-                    toc += (new Array(level - openLevel + 1)).join("</ul>")
-                }
-
-                level = parseInt(openLevel);
-
-                var anchor = titleText.replace(/ /g, "_");
-                toc += "<li><a href=\"#" + anchor + "\"><p>" + titleText
-                    + "</p></a></li>";
-
-                return "<h" + openLevel + "><a name=\"" + anchor + "\">"
-                    + titleText + "</a></h" + closeLevel + ">";
-            }
-        );
-
-    if (level) {
-        toc += (new Array(level + 1)).join("</ul>")
-    }
-
-    document.getElementById("toc").innerHTML += toc;
+            );
+  
+        if (level) {
+            toc += (new Array(level + 1)).join("</ul>")
+        }
+  
+        document.getElementById("toc").innerHTML += toc;
+  }
 }
