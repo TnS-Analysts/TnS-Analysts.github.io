@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>T&S Analysts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/main.css">
+    <script defer src="/js/app.js"></script>
+
+    <style>
+      .header .text-box h1{
+        font-size: 96px;
+      }
+
+      .main h1{
+        text-align: center;
+      }
+
+      .first_stream{
+        background-color: #d8f2ff;
+      }
+
+      .first_stream iframe{
+        display: block;
+        width: 90%;
+        height: 590px;
+        margin: 0 auto;
+      }
+
+      .first_stream input{
+        display: block;
+        border-radius: 10px;
+        transition: 0.5s ease;
+        cursor: pointer;
+        background: #3b5998;
+        color: white;
+        padding: 10px 15px;
+        margin: 0 auto;
+        border-right: 1px #000033 solid;
+        border-bottom: 1px #000033 solid;
+        border-top: 0px;
+        border-left: 0px;
+        font-size: 1.25em;
+      }
+
+      .first_stream input:hover{
+        filter: brightness(1.1);
+      }
+
+      a{
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <section class="header">
+      <website-nav></website-nav>
+      <div class="text-box">
+        <h1>The Grasp of Music:<br/>
+              Chapter 1</h1>
+      </div>
+    </section>
+    <table-of-contents></table-of-contents>
+
+    <section class="main" id="contents">
+      <div class="background first_stream"><div class="content hidden">
+        <h1>First Stream</h1>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100088225345938%2Fvideos%2F865661594489363%2F&show_text=false&width=560&t=0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        <br/>
+        <a href="https://www.facebook.com/100088225345938/videos/865661594489363">
+          <input class="shadow" type="button" value="View on Facebook">
+        </a>
+      </div></div>
+    </section>
+
+    <!--Footer-->
+    <website-footer></website-footer>
+  </body>
+</html>
