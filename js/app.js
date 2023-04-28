@@ -120,6 +120,18 @@ class WebsiteNav extends HTMLElement {
                   Second Stream
                 </a>
               </span>
+
+              <span class="text">
+                <a href="/pages/Q4/restream_analysis.html" class="mobile">
+                  Restream Analysis
+                </a>
+              </span>
+              
+              <span class="text">
+                <a href="/pages/Q4/pechakucha_presentation.html" class="mobile">
+                  PechaKucha Presentation
+                </a>
+              </span>
             </div>
 
             <button class="more-btn">
@@ -188,7 +200,7 @@ class WebsiteFooter extends HTMLElement {
         </div>
 
         <div class="footer-column copyright">
-            <p>© 2022 T&S Analysts. All rights reserved.</p> 
+            <p>© 2023 T&S Analysts. All rights reserved.</p> 
         </div>
     </div>
 </footer>
