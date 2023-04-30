@@ -120,12 +120,6 @@ class WebsiteNav extends HTMLElement {
                   Second Stream
                 </a>
               </span>
-
-              <span class="text">
-                <a href="/pages/Q4/restream_analysis.html" class="mobile">
-                  Restream Analysis
-                </a>
-              </span>
               
               <span class="text">
                 <a href="/pages/Q4/pechakucha_presentation.html" class="mobile">
