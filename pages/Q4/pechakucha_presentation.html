@@ -8,7 +8,30 @@
     <link rel="stylesheet" href="/css/main.css">
     <script defer src="/js/app.js"></script>
 
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css"/>
+    <script src="https://cdn.plyr.io/3.7.3/plyr.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const player = Plyr.setup('.js-player');
+      });
+    </script>
+
     <style>
+      .header .text-box h1{
+        font-size: 84px;
+      }
+
+      .slides{
+        background-color: #d8f2ff;
+      }
+
+      .video-presentation{
+        background-color: #ffe8f0;
+      }
+
+      .main h1{
+        text-align: center;
+      }
     </style>
   </head>
 
@@ -17,14 +40,120 @@
     <section class="header">
       <website-nav></website-nav>
       <div class="text-box">
-        <h1></h1>
+        <h1>PechaKucha<br/>
+            Presentation</h1>
       </div>
     </section>
-    <table-of-contents></table-of-contents>
+
+    <div class="toc-container">
+      <img src="/images/icons/toc.png">
+      <div id="toc">
+        <h3>Table of Contents</h3>
+        <ul><li><a href="#Slides"><p>Slides</p></a></li><li><a href="#Video_Presentation"><p>Video Presentation</p></a></li></ul>
+      </div>
+    </div>
 
     <section class="main" id="contents">
-      <div class="background first"><div class="content hidden">
-        
+      <div class="background slides"><div class="content hidden">
+        <h1><a name="Slides">Slides</a></h1>
+        <br/>
+        <div class="slider-container">
+          <div class="slider">
+            <img src="/images/pechakucha/1.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/2.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/3.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/4.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/5.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/6.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/7.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/8.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/9.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/10.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/11.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/12.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/13.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/14.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/15.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/16.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/17.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/18.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/19.png">
+          </div>
+          <div class="slider">
+            <img src="/images/pechakucha/20.png">
+          </div>
+
+          <div class="prev-button" onclick="plusSlide(-1)"> < </div>
+          <div class="next-button" onclick="plusSlide(1)"> > </div>
+
+          <div class="lines">
+            <div class="line" onclick="currentSlide(1)"></div>
+            <div class="line" onclick="currentSlide(2)"></div>
+            <div class="line" onclick="currentSlide(3)"></div>
+            <div class="line" onclick="currentSlide(4)"></div>
+            <div class="line" onclick="currentSlide(5)"></div>
+            <div class="line" onclick="currentSlide(6)"></div>
+            <div class="line" onclick="currentSlide(7)"></div>
+            <div class="line" onclick="currentSlide(8)"></div>
+            <div class="line" onclick="currentSlide(9)"></div>
+            <div class="line" onclick="currentSlide(10)"></div>
+            <div class="line" onclick="currentSlide(11)"></div>
+            <div class="line" onclick="currentSlide(12)"></div>
+            <div class="line" onclick="currentSlide(13)"></div>
+            <div class="line" onclick="currentSlide(14)"></div>
+            <div class="line" onclick="currentSlide(15)"></div>
+            <div class="line" onclick="currentSlide(16)"></div>
+            <div class="line" onclick="currentSlide(17)"></div>
+            <div class="line" onclick="currentSlide(18)"></div>
+            <div class="line" onclick="currentSlide(19)"></div>
+            <div class="line" onclick="currentSlide(20)"></div>
+          </div>
+        </div>
+      </div></div>
+
+      <div class="background video-presentation"><div class="content hidden">
+        <h1><a name="Video_Presentation">Video Presentation</a></h1>
+        <div class="shadow">
+          <video class="js-player" id="player" playsinline controls>
+            <source src="/images/stream/stream2.mp4" type="video/mp4"/>
+          </video>
+        </div>
       </div></div>
     </section>
 

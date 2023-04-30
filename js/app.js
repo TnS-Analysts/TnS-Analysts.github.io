@@ -365,7 +365,7 @@ window.onload = function () {
   var level = 0
   var maxLevel = 1
 
-  if (!window.location.pathname.includes("our_events")){
+  if (!(window.location.pathname.includes("our_events") || window.location.pathname.includes("second_stream") || window.location.pathname.includes("pechakucha_presentation"))){
     document.getElementById("contents").innerHTML =
             document.getElementById("contents").innerHTML.replace(
                 /<h([\d])>([^<]+)<\/h([\d])>/gi,
